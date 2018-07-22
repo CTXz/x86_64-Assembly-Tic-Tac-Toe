@@ -1,0 +1,4 @@
+*.o
+ttt
+src/*.o
+.gch
