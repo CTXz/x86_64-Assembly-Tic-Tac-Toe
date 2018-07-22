@@ -14,8 +14,8 @@ Evaluates the grid for victory.
 
 |RAX/Return Value|Evaluation |
 |----------------|-----------|
-|0x0             |No Victory |
-|0x1             |Victory    |
+|`0x0`           |No Victory |
+|`0x1`           |Victory    |
 
 ## C Call
 ```C
@@ -84,4 +84,80 @@ For a bottom left to top right victory, the field is tested against `0x3330` (wh
 
 ---
 
-To be done...
+To further explain, three examples are given, each illustrating evaluation for a different victory.
+
+#### Horizontal
+
+In the following example, the underlying grid is evaluated for a horizontal win for player X:
+
+![horizontal grid](img/eval_grid_2d_horizontal.png)
+
+If we replace fields with their corresponding binary data structures, a 2d grid would manifest its information as it follows:
+
+![horizontal grid data](img/eval_grid_2d_data_horizontal.png)
+
+The 2d grid would translate to the following array of 18 bits in size:
+
+![horizontal data structure](img/eval_grid_1d_horizontal.png)
+
+To check for victory, we begin by testing the first three fields by applying an AND operation to the 18 bit grid to value `0x3F`:
+
+![row 1](img/eval_grid_AND_1_horizontal.png)
+
+The result of the AND operation does not match `0x3F`, meaning one or more fields in this row are empty or reserved by the opposing player O. To test the next row, the grid is shifted 6 times (by `0x6`) to the right. After the field has been shifted, the grid is once again tested:
+
+![row 2](img/eval_grid_AND_2_horizontal.png)
+
+Once again, the fields mismatch. Let's shift once more, and see what happens if all three fields match:
+
+![row 3](img/eval_grid_AND_3_horizontal.png)
+
+All three fields fields match! It's a victory!
+
+#### Vertical
+
+In the following example, the underlying grid is evaluated for a vertical win for player O:
+
+![vertical grid](img/eval_grid_2d_vertical.png)
+
+If we replace fields with their corresponding binary data structures, a 2d grid would manifest its information as it follows:
+
+![vertical grid data](img/eval_grid_2d_data_vertical.png)
+
+The 2d grid would translate to the following array of 18 bits in size:
+
+![vertical data structure](img/eval_grid_1d_vertical.png)
+
+To check for victory, we begin by testing the 1st, 4th and 7th field by applying an AND operation to the 18 bit grid to value `0x30C3`:
+
+![column 1](img/eval_grid_AND_1_vertical.png)
+
+The result of the AND operation does not match `0x1041` which is the value that matches a vertical O win, meaning one or more fields in this column are empty or reserved by the opposing player O. To test the next row, the grid is shifted 2 times (by `0x2`) to the right. After the field has been shifted, the grid is once again tested:
+
+![column 2](img/eval_grid_AND_2_vertical.png)
+
+Once again, the fields mismatch. Let's shift once more, and see what happens if all three fields match:
+
+![column 3](img/eval_grid_AND_3_vertical.png)
+
+All three fields fields match! It's a victory!
+
+#### Diagonal
+
+In the following example, the underlying grid is evaluated for a diagonal win for player X:
+
+![diagonal grid](img/eval_grid_2d_diagonal.png)
+
+If we replace fields with their corresponding binary data structures, a 2d grid would manifest its information as it follows:
+
+![vertical grid data](img/eval_grid_2d_data_diagonal.png)
+
+If we replace fields with their corresponding binary data structures, a 2d grid would manifest its information as it follows:
+
+![vertical data structure](img/eval_grid_1d_diagonal.png)
+
+For diagonal wins, no shifting is done. Instead, the field is tested against two bit. One that tests for a diagonal win from the top left to the bottom right (`0x30303`) and one that checks tests for a diagonal win from the bottom left to the top right (`0x3330`). The program begins by checking for a diagonal win spanning from the top left to the bottom right, which will match our field:
+
+![diagonal left to right win](img/eval_grid_AND_diagonal.png)
+
+All three fields fields match! It's a victory!
