@@ -1,0 +1,13 @@
+site_name: x86_64 Assembly Tic-Tac-Toe
+
+pages:
+    - Home: index.md
+
+    - Assembly Reference:
+      - init_grid: init_grid.md
+      - eval_grid: eval_grid.md
+      - set_field: set_field.md
+      - get_field: get_field.md
+
+
+theme: readthedocs
