@@ -9,7 +9,7 @@ A Tic Tac Toe version that operates on a **18 bit** grid data structure, written
 
 Just recently I finished reading Jeff Duntemann's "Assembly Language Step-by-Step: Programming with Linux" book, a wonderful introduction to the Intel IA32 assembly language. I figured, writing a memory optimized version of Tic Tac Toe would be a great way to practice my newly acquired skills, as well as getting introduced to the newer x86_64 assembly language.
 
-The core of the game has been written in assembly, which exposes gcc C compatible functions functions to set, read and evaluate the 3x3 Tic Tac Toe grid. Terminal IO and grid drawing is done in C, as the compiler likely generates more optimized code than I would If I were to write those features in assembly.
+The core of the game has been written in assembly, which exposes gcc C compatible functions to set, read and evaluate the 3x3 Tic Tac Toe grid. Terminal IO and grid drawing is done in C, as the compiler likely generates more optimized code than I would If I were to write those features in assembly.
 
 ## Obtaining a local copy
 
