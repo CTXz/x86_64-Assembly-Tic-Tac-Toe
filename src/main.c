@@ -31,7 +31,7 @@
 
 #define clear() printf("\033[H\033[J")
 
-/* Convert field return to its appropraite grid char */
+/* Convert field return to its appropriate grid char */
 char field_to_char(uint8_t field_ret) {
   switch(field_ret) {
     case EMPTY:
