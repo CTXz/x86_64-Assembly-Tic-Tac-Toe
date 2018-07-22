@@ -95,8 +95,6 @@ After the operand has been tested, the resulting value is checked for 0. Should 
 - 0 - For Circle
 - 1 - For Cross
 
-As a circle field is always even and a cross field is always odd.
-
 ---
 
 To further explain, the following example is guided by an illustration:
@@ -116,7 +114,7 @@ To obtain the state of the middle field, an AND operation is applied, where `0x3
 
 ![AND operation](img/get_field_and.png)
 
-Further, the result of the AND operation is applied to a modulo of 3, so that values are narrowed/scaled down to 0 or 1, where 0 represents even numbers and thereby returns a X and 1 represents odd numbers, thereby returning O.
+Further, the result of the AND operation is applied to a modulo of 3, so that values are narrowed/scaled down to 0 or 1, where 1 represents odd numbers and thereby returns a X and 1 represents even numbers, thereby returning O.
 
 ```
 0x200 % 0x3 = 0x1
