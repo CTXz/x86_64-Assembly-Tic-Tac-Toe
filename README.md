@@ -1,6 +1,8 @@
 # x86_64 Assembly Tic Tac Toe
 > This project will **only** run on x86_64/AMD64 Linux versions.
 
+![header](docs/img/header.png)
+
 A Tic Tac Toe version that operates on a **18 bit** grid data structure, written in assembly and C.
 
 ## About
