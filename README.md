@@ -120,7 +120,7 @@ Source Files located in `src/`:
 
 Assembly Reference:
 
-- [init_grid](init_grid.md)
-- [eval_grid](eval_grid.md)
-- [set_field](set_field.md)
-- [get_field](get_field.md)
+- [init_grid](docs/init_grid.md)
+- [eval_grid](docs/eval_grid.md)
+- [set_field](docs/set_field.md)
+- [get_field](docs/get_field.md)
