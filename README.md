@@ -126,3 +126,23 @@ Assembly Reference:
 - [eval_grid](docs/eval_grid.md)
 - [set_field](docs/set_field.md)
 - [get_field](docs/get_field.md)
+
+### Serving documentation form [mkdocs](https://www.mkdocs.org/)
+
+As some, including myself, prefer other markdown engines over GitHub's, the documentation may be served and deployed by [mkdocs](https://www.mkdocs.org/), a static website generator focused on code documentation:
+
+![mkdocs rendered README](docs/img/mkdocs.png)
+
+To serve the documentation locally on `localhost:8000`, run the following from within the project repository:
+
+```
+$ mkdocs serve
+```
+
+To build documentation, so that it can be deployed by a web server, run:
+
+```
+$ mkdocs build
+```
+
+Upon success, mkdocs will generate a `site/` directory which can be deployed onto a web server.
