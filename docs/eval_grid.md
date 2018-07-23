@@ -74,6 +74,8 @@ Similar to horizontal testing, each column is tested by rotating the grid by `0x
 
 If any of the columns match a victory, the procedure returns `0x1` on `RAX`.
 
+> See illustrated example bellow for a visual assistance.
+
 ### Diagonal Victory
 
 Once again, should a vertical victory be absent, the procedure will test for a diagonal victory. Unlike horizontal and vertical victories, no rotations are applied to the grid. Instead, the procedure evaluates for a diagonal spanning from the top left to the bottom right, and a diagonal spanning from the bottom left to the top right.
@@ -81,6 +83,8 @@ Once again, should a vertical victory be absent, the procedure will test for a d
 For a top left to bottom right victory, the field is tested against `0x30303` (which translates to `110000001100000011`), where the bitwise AND operation must return `0x10101` for a Circle win, and `0x30303` for a cross win.
 
 For a bottom left to top right victory, the field is tested against `0x3330` (which translates to `11001100110000`), where the bitwise AND operation must return `0x1110` for a Circle win, and `0x3330` for a cross win.
+
+> See illustrated example bellow for a visual assistance
 
 ---
 
