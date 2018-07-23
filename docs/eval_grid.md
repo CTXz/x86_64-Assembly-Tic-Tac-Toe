@@ -35,10 +35,10 @@ if(eval_grid(true))
 
 ## Assembly Example
 
-In the following example, we will test the grid for a cross victory and jump to the `win` label if player cross has won.
+In the following example, we will test the grid for a X victory and jump to the `win` label if player X has won.
 
 ```asm
-mov   RDI, 0x1    ; Check for cross victory
+mov   RDI, 0x1    ; Check for X victory
 call  eval_grid   ; Evaluate grid for victory
 
 test  rax, rax    ; Check for victory
