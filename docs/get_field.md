@@ -1,4 +1,4 @@
-# get_field
+on the 18 bit data structure# get_field
 > Source: [core.asm](/src/core.asm)
 
 ## Description

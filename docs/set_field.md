@@ -48,7 +48,7 @@ Full diagram may be accessed [here](https://www.lucidchart.com/documents/view/f5
 
 ## Procedure Overview
 
-set_field fetches the state of the field assigned to the provided x and y co-ordinates. This is achieved by first converting the x and y co-ordinates into a index, thereby obtaining the position of the specified field on a 1 dimensional field array.
+set_field fetches the state of the field assigned to the provided x and y co-ordinates. This is achieved by first converting the x and y co-ordinates into a index, thereby obtaining the position of the specified field on the 18 bit data structure.
 
 The field index is calculated by the following equation:
 
