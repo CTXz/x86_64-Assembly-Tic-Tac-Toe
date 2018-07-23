@@ -114,7 +114,7 @@ To obtain the state of the middle field, an AND operation is applied, where `0x3
 
 ![AND operation](img/get_field_and.png)
 
-Further, the result of the AND operation is applied to a modulo of 3, so that values are narrowed/scaled down to 0 or 1, where 1 represents odd numbers and thereby returns a X and 1 represents even numbers, thereby returning O.
+Further, the result of the AND operation is applied to a modulo of 3, so that values are narrowed/scaled down to 0 or 1, where 0 represents odd numbers and thereby returns a X and 1 represents even numbers, thereby returning O.
 
 ```
 0x200 % 0x3 = 0x1
