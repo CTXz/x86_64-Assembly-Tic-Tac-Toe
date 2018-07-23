@@ -1,5 +1,5 @@
 on the 18 bit data structure# get_field
-> Source: [core.asm](/src/core.asm)
+> Source: [core.asm](https://github.com/CTXz/x86_64-Assembly-Tic-Tac-Toe/blob/master/src/core.asm#L233)
 
 ## Description
 
