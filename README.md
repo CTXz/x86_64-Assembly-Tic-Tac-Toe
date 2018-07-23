@@ -133,7 +133,7 @@ As some, including myself, prefer other markdown engines over GitHub's, the docu
 
 ![mkdocs rendered README](docs/img/mkdocs.png)
 
-To serve the documentation locally on `localhost:8000`, run the following from within the project repository:
+To serve the documentation locally on `localhost:8000`, run the following command from within the project repository:
 
 ```
 $ mkdocs serve
