@@ -135,7 +135,7 @@ section .text
 
   field_index:
 
-  xor rax, rax                  ; Clear RAX
+  xor   rax, rax                ; Clear RAX
   jecxz .addition               ; Skip multiplication if y == 0
 
   mov   rax, 0x3
