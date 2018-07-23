@@ -34,6 +34,6 @@ call init_grid
 
 ## Procedure Diagram
 
-The diagram may be viewed online [here](https://www.lucidchart.com/invitations/accept/07152f13-30bb-43b1-8e44-199bdf4b9f2f)
+The diagram may be viewed online [here](https://www.lucidchart.com/documents/view/35b1d137-33df-4bc6-87dc-e6aa1f333ded)
 
 ![diagram](img/init_grid.png)
