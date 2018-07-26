@@ -3,7 +3,7 @@
 
 ## Description
 
-Initializes/Empties the tic-tac-toe field by overwriting it's allocated memory with zeros.
+Initializes/Empties the tic-tac-toe field by overwriting its allocated memory with zeros.
 
 init_grid **must** be called before any other core procedure, else the allocated memory may be filled with garbage and procedures will result in undefined behavior.
 
