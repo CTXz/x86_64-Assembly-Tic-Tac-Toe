@@ -127,7 +127,7 @@ Assembly Reference:
 - [set_field](docs/set_field.md)
 - [get_field](docs/get_field.md)
 
-### Serving documentation form [mkdocs](https://www.mkdocs.org/)
+### Serving documentation from [mkdocs](https://www.mkdocs.org/)
 
 As some people, including myself, prefer other markdown engines over GitHub's, the documentation may be served and deployed by [mkdocs](https://www.mkdocs.org/), a static website generator focused on code documentation:
 
