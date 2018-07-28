@@ -72,7 +72,8 @@ int main() {
   {
     init_grid();
 
-    bool cross      = false;
+		uint8_t turns = 0;
+    bool cross = false;
 
     /* Round loop */
     do
@@ -119,13 +120,14 @@ int main() {
 
         if (get_field(x-1, y-1) == EMPTY) {
           set_field(x-1, y-1, cross);
+					turns++;
           break;
         }
 
         printf("Field at (%i, %i) already taken!\n", x, y);
 
       } while(true);
-    } while(!eval_grid(cross));
+    } while(turns < 5 || !eval_grid(cross));
 
     /* Prompt whether to quit or restart */
     clear();
